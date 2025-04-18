@@ -1,0 +1,118 @@
+<!doctype html>
+
+<!-- Sounds taken from:
+
+    Hurt noise: Mojang Studios
+
+
+    Pictures from:
+
+    Eagle Intro: https://clipart.world/eagle-clipart/awesome-eagle-clipart-transparent/
+    Fire: https://clipart.world/wp-content/uploads/2020/09/Fire-clipart-5.png
+    Knife: https:https://clipart.world/wp-content/uploads/2021/06 Knife-clipart-transparent-background-2.png
+    Rock: https://www.pngkey.com/detail/u2e6e6e6t4e6u2u2_cartoon-rock-cliparts-rock-clipart/
+    Sky: https://www.google.com/
+    https://i.pinimg.com/736x/9e/03/4d/9e034dec913971c7750e4836dc1f479b.jpg
+    Coin:https://www.google.com/https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/60815/golden-dollar-coin-clipart-xl.png
+ -->
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+   <!-- load in the p5 sound library -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    
+    <style></style>
+        <style>
+      #canvas_container {
+        margin: auto;
+        text-align: center;
+        border-bottom: 3px solid brown;
+        padding-bottom: 20px;
+        border: brown dashed;
+        background: #87CEEB;
+
+  
+      }
+      #controls {
+        margin: auto;
+        text-align: center;
+        padding-top: 5px;
+      }
+
+      #diff_dropdown {
+        margin: auto;
+        text-align: center;
+      }
+
+      #all {
+        font-size: 17px;
+
+        
+      
+      }
+
+      #full{
+
+        background: #C4A484;
+        border: #87CEEB dashed;
+
+      }
+      #head{
+        text-align: center;
+        color: brown;
+      }
+
+
+   * {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div id="full">
+      <h1 id="head">Welcome to My Game!</h1>
+    <div id="canvas_container"></div>
+    <div id="controls">
+      <select id="diff_dropdown" oninput="startGame(this);">
+        <option value="easy" selected>Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <!-- <button id="start" onclick="playGame();">Start Game</button> -->
+    </div>
+    <div id="all">
+
+      <p id="dir">
+
+        <b>Directions:</b>
+        <br>
+        Use the 'A' and 'D' keys to move left and right, and collect as much coins as possible while evading the hurtful objects!
+
+      </p>
+
+
+      <p id="doc">
+        <b>Description of Game:</b>
+
+        <br>
+
+        Eagle Dodge is a game where the user plays as an eagle flying through the sky and collecting as many coins as possible. Each coin collections increases a player’s score by 1. There will be, at randomly chosen locations, flying obstacles that the player would have to avoid while collecting these coins,  such as knifes, rocks, and fireballs. Each hit from those 'hurtful' looking objects will result in the health-bar of the player decreasing by one. In total, a user has 7 lives before the game is over. There are three modes of difficulty in this game, 'Easy', 'Medium', and 'Hard'. Switching between these modes will make the speeds of both the coins and the obstacles start to increase more, making it more difficult for the player to dodge obstacles and/or collect coins. There are three states/screens to this game, a 'starter' screen, where the player will be able to hit the start button in order to get the game started, a 'playing' screen, where the actual game will take place, and finally, an 'end' screen, where the player will be transported to once the game is over (all their lives are used up). Additionally, high-scores will be recorded, stored, and displayed at both the starter screen and the end screen each time a player beats the old score. 
+      </p>
+   <p>
+        This game was inspired by relatively simple mobile games such as Flappy Bird and other endless flying games. What’s a bit different about this particular game is that, unlike the ones where the player is able to play almost infinitely upwards (except if they fall down or miss a step), this game gives a player a limited amount of lives that decreases each time it hits the wrong object. This, plus the randomness of where the objects start falling, gives the game an added challenge in order to play for longer periods of time.
+
+
+      </p>
+
+
+
+    </div>
+  </div>
+  </body>
+</html>
